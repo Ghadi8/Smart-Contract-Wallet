@@ -1,0 +1,30 @@
+{
+  "name": "account-abstraction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "launch-devnet": "ganache-cli --chainId 1337 -a 10 -e 100000 --acctKeys devnet-accounts.json -m \"olive cook review chalk discover sample vessel vast soul turkey cigar moment\"",
+    "compile-all": "truffle compile --all",
+    "compile-all-clean": "rm -rf ./abis && truffle compile --all",
+    "deploy-devnet": "truffle migrate --network development --compile-none",
+    "deploy-devnet-reset": "truffle migrate --network development --reset",
+    "deploy-goerli": "truffle migrate --network goerli --compile-none",
+    "deploy-goerli-reset": "truffle migrate --network goerli --compile-none --reset",
+    "deploy-mainnet": "truffle migrate --network mainnet --compile-none",
+    "test": "truffle test --compile-none",
+    "verify-goerli": "truffle run verify --network goerli",
+    "verify-mainnet": "truffle run verify --network mainnet"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.1",
+    "@truffle/hdwallet-provider": "^2.1.5",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "ethers": "^5.7.2",
+    "keccak256": "^1.0.6",
+    "web3": "^1.8.1"
+  }
+}
