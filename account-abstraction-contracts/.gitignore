@@ -1,3 +1,5 @@
 node_modules
 .main.secret
 .test.secret
+.env.local
+devnet-accounts.json
