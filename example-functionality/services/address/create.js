@@ -31,4 +31,4 @@ const createAddress = async (salt) => {
   return account;
 };
 
-createAddress(2).then((address) => console.log(address));
+createAddress(0).then((address) => console.log(address));

@@ -27,4 +27,4 @@ const predictAddress = async (salt) => {
   return tx;
 };
 
-predictAddress(2).then((address) => console.log(address));
+predictAddress(0).then((address) => console.log(address));
