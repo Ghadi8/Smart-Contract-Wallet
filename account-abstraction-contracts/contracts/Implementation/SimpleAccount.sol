@@ -20,6 +20,9 @@ import "../Core/BaseAccount.sol";
 contract SimpleAccount is BaseAccount, UUPSUpgradeable, Initializable {
     using ECDSA for bytes32;
 
+    /// @notice defining whether contract is Base or not
+    bool public isBase;
+
     //explicit sizes of nonce, to fit a single storage cell with "owner"
     uint96 private _nonce;
     address public owner;
@@ -32,7 +35,7 @@ contract SimpleAccount is BaseAccount, UUPSUpgradeable, Initializable {
         return _entryPoint;
     }
 
-    IEntryPoint private immutable _entryPoint;
+    IEntryPoint private _entryPoint;
 
     event SimpleAccountInitialized(
         IEntryPoint indexed entryPoint,
@@ -42,8 +45,8 @@ contract SimpleAccount is BaseAccount, UUPSUpgradeable, Initializable {
     // solhint-disable-next-line no-empty-blocks
     receive() external payable {}
 
-    constructor(IEntryPoint anEntryPoint) {
-        _entryPoint = anEntryPoint;
+    constructor() {
+        isBase = true;
     }
 
     modifier onlyOwner() {
@@ -89,8 +92,12 @@ contract SimpleAccount is BaseAccount, UUPSUpgradeable, Initializable {
      * an account must have a method for replacing the entryPoint, in case the the entryPoint is
      * upgraded to a newer version.
      */
-    function initialize(address anOwner) public virtual initializer {
-        _initialize(anOwner);
+    function initialize(IEntryPoint anEntryPoint) external initializer {
+        require(
+            isBase == false,
+            "SimpleAccount: this is the base contract, cannot be initialized"
+        );
+        _entryPoint = anEntryPoint;
     }
 
     function _initialize(address anOwner) internal virtual {

@@ -18,7 +18,7 @@ module.exports = async function (deployer, network, accounts) {
       c = { ...conf.devnet };
   }
 
-  await deployer.deploy(simpleAccountCont, c.entrypointAddress);
+  await deployer.deploy(simpleAccountCont);
 
   const simpleAccount = await simpleAccountCont.deployed();
 
