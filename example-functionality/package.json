@@ -1,0 +1,18 @@
+{
+  "name": "example-functionality",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predict": "node services/address/predict.js",
+    "create": "node services/address/create.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bytes32": "^0.0.3",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2"
+  }
+}
