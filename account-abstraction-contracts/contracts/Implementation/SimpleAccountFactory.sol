@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "./SimpleAccount.sol";
 
 interface ISimpleAccount {
-    function initialize(address entrypoint) external;
+    function initialize(address entrypoint, address owner) external;
 }
 
 /**
@@ -54,7 +54,7 @@ contract SimpleAccountFactory is Ownable {
 
         children.push(identicalChild);
 
-        ISimpleAccount(identicalChild).initialize(entrypoint);
+        ISimpleAccount(identicalChild).initialize(entrypoint, msg.sender);
 
         emit NewSimpleAccount(identicalChild);
     }

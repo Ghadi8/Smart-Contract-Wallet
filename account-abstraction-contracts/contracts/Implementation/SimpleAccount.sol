@@ -92,12 +92,17 @@ contract SimpleAccount is BaseAccount, UUPSUpgradeable, Initializable {
      * an account must have a method for replacing the entryPoint, in case the the entryPoint is
      * upgraded to a newer version.
      */
-    function initialize(IEntryPoint anEntryPoint) external initializer {
+    function initialize(IEntryPoint anEntryPoint, address owner_)
+        external
+        initializer
+    {
         require(
             isBase == false,
             "SimpleAccount: this is the base contract, cannot be initialized"
         );
         _entryPoint = anEntryPoint;
+
+        _initialize(owner_);
     }
 
     function _initialize(address anOwner) internal virtual {

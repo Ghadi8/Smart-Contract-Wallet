@@ -136,19 +136,19 @@
         2803
       ],
       "IAggregator": [
-        3308
+        3318
       ],
       "IEntryPoint": [
-        3499
+        3509
       ],
       "IStakeManager": [
-        3603
+        3613
       ],
       "UserOperation": [
-        3661
+        3671
       ],
       "UserOperationLib": [
-        3765
+        3775
       ]
     },
     "id": 2804,
@@ -173,7 +173,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 2804,
-        "sourceUnit": 3500,
+        "sourceUnit": 3510,
         "src": "186:39:13",
         "symbolAliases": [],
         "unitAlias": ""
@@ -209,7 +209,7 @@
                 "510:16:13"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 3765,
+              "referencedDeclaration": 3775,
               "src": "510:16:13"
             },
             "nodeType": "UsingForDirective",
@@ -224,13 +224,13 @@
                   "531:13:13"
                 ],
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 3661,
+                "referencedDeclaration": 3671,
                 "src": "531:13:13"
               },
-              "referencedDeclaration": 3661,
+              "referencedDeclaration": 3671,
               "src": "531:13:13",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_UserOperation_$3661_storage_ptr",
+                "typeIdentifier": "t_struct$_UserOperation_$3671_storage_ptr",
                 "typeString": "struct UserOperation"
               }
             }
@@ -901,7 +901,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IEntryPoint_$3499",
+                    "typeIdentifier": "t_contract$_IEntryPoint_$3509",
                     "typeString": "contract IEntryPoint"
                   },
                   "typeName": {
@@ -914,13 +914,13 @@
                         "1825:11:13"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 3499,
+                      "referencedDeclaration": 3509,
                       "src": "1825:11:13"
                     },
-                    "referencedDeclaration": 3499,
+                    "referencedDeclaration": 3509,
                     "src": "1825:11:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IEntryPoint_$3499",
+                      "typeIdentifier": "t_contract$_IEntryPoint_$3509",
                       "typeString": "contract IEntryPoint"
                     }
                   },
@@ -1008,7 +1008,7 @@
                           "referencedDeclaration": 2694,
                           "src": "2321:6:13",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                            "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                             "typeString": "struct UserOperation calldata"
                           }
                         },
@@ -1040,7 +1040,7 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                            "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                             "typeString": "struct UserOperation calldata"
                           },
                           {
@@ -1059,7 +1059,7 @@
                         "referencedDeclaration": 2762,
                         "src": "2302:18:13",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UserOperation_$3661_calldata_ptr_$_t_bytes32_$_t_address_$returns$_t_uint256_$",
+                          "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UserOperation_$3671_calldata_ptr_$_t_bytes32_$_t_address_$returns$_t_uint256_$",
                           "typeString": "function (struct UserOperation calldata,bytes32,address) returns (uint256)"
                         }
                       },
@@ -1110,7 +1110,7 @@
                           "referencedDeclaration": 2694,
                           "src": "2367:6:13",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                            "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                             "typeString": "struct UserOperation calldata"
                           }
                         },
@@ -1122,7 +1122,7 @@
                         "memberLocation": "2374:8:13",
                         "memberName": "initCode",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 3644,
+                        "referencedDeclaration": 3654,
                         "src": "2367:15:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_calldata_ptr",
@@ -1186,7 +1186,7 @@
                               "referencedDeclaration": 2694,
                               "src": "2435:6:13",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                                "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                                 "typeString": "struct UserOperation calldata"
                               }
                             }
@@ -1194,7 +1194,7 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                                "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                                 "typeString": "struct UserOperation calldata"
                               }
                             ],
@@ -1205,7 +1205,7 @@
                             "referencedDeclaration": 2769,
                             "src": "2411:23:13",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UserOperation_$3661_calldata_ptr_$returns$__$",
+                              "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UserOperation_$3671_calldata_ptr_$returns$__$",
                               "typeString": "function (struct UserOperation calldata)"
                             }
                           },
@@ -1318,7 +1318,7 @@
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                    "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                     "typeString": "struct UserOperation"
                   },
                   "typeName": {
@@ -1331,13 +1331,13 @@
                         "2068:13:13"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 3661,
+                      "referencedDeclaration": 3671,
                       "src": "2068:13:13"
                     },
-                    "referencedDeclaration": 3661,
+                    "referencedDeclaration": 3671,
                     "src": "2068:13:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_UserOperation_$3661_storage_ptr",
+                      "typeIdentifier": "t_struct$_UserOperation_$3671_storage_ptr",
                       "typeString": "struct UserOperation"
                     }
                   },
@@ -1529,7 +1529,7 @@
                                 "referencedDeclaration": 2690,
                                 "src": "2693:10:13",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_IEntryPoint_$3499_$",
+                                  "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_IEntryPoint_$3509_$",
                                   "typeString": "function () view returns (contract IEntryPoint)"
                                 }
                               },
@@ -1545,7 +1545,7 @@
                               "src": "2693:12:13",
                               "tryCall": false,
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_IEntryPoint_$3499",
+                                "typeIdentifier": "t_contract$_IEntryPoint_$3509",
                                 "typeString": "contract IEntryPoint"
                               }
                             }
@@ -1553,7 +1553,7 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_IEntryPoint_$3499",
+                                "typeIdentifier": "t_contract$_IEntryPoint_$3509",
                                 "typeString": "contract IEntryPoint"
                               }
                             ],
@@ -1723,7 +1723,7 @@
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                    "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                     "typeString": "struct UserOperation"
                   },
                   "typeName": {
@@ -1736,13 +1736,13 @@
                         "3769:13:13"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 3661,
+                      "referencedDeclaration": 3671,
                       "src": "3769:13:13"
                     },
-                    "referencedDeclaration": 3661,
+                    "referencedDeclaration": 3671,
                     "src": "3769:13:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_UserOperation_$3661_storage_ptr",
+                      "typeIdentifier": "t_struct$_UserOperation_$3671_storage_ptr",
                       "typeString": "struct UserOperation"
                     }
                   },
@@ -1876,7 +1876,7 @@
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                    "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                     "typeString": "struct UserOperation"
                   },
                   "typeName": {
@@ -1889,13 +1889,13 @@
                         "4273:13:13"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 3661,
+                      "referencedDeclaration": 3671,
                       "src": "4273:13:13"
                     },
-                    "referencedDeclaration": 3661,
+                    "referencedDeclaration": 3671,
                     "src": "4273:13:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_UserOperation_$3661_storage_ptr",
+                      "typeIdentifier": "t_struct$_UserOperation_$3671_storage_ptr",
                       "typeString": "struct UserOperation"
                     }
                   },
@@ -2366,19 +2366,19 @@
         2803
       ],
       "IAggregator": [
-        3308
+        3318
       ],
       "IEntryPoint": [
-        3499
+        3509
       ],
       "IStakeManager": [
-        3603
+        3613
       ],
       "UserOperation": [
-        3661
+        3671
       ],
       "UserOperationLib": [
-        3765
+        3775
       ]
     },
     "id": 2804,
@@ -2403,7 +2403,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 2804,
-        "sourceUnit": 3500,
+        "sourceUnit": 3510,
         "src": "186:39:13",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2439,7 +2439,7 @@
                 "510:16:13"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 3765,
+              "referencedDeclaration": 3775,
               "src": "510:16:13"
             },
             "nodeType": "UsingForDirective",
@@ -2454,13 +2454,13 @@
                   "531:13:13"
                 ],
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 3661,
+                "referencedDeclaration": 3671,
                 "src": "531:13:13"
               },
-              "referencedDeclaration": 3661,
+              "referencedDeclaration": 3671,
               "src": "531:13:13",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_UserOperation_$3661_storage_ptr",
+                "typeIdentifier": "t_struct$_UserOperation_$3671_storage_ptr",
                 "typeString": "struct UserOperation"
               }
             }
@@ -3131,7 +3131,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IEntryPoint_$3499",
+                    "typeIdentifier": "t_contract$_IEntryPoint_$3509",
                     "typeString": "contract IEntryPoint"
                   },
                   "typeName": {
@@ -3144,13 +3144,13 @@
                         "1825:11:13"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 3499,
+                      "referencedDeclaration": 3509,
                       "src": "1825:11:13"
                     },
-                    "referencedDeclaration": 3499,
+                    "referencedDeclaration": 3509,
                     "src": "1825:11:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IEntryPoint_$3499",
+                      "typeIdentifier": "t_contract$_IEntryPoint_$3509",
                       "typeString": "contract IEntryPoint"
                     }
                   },
@@ -3238,7 +3238,7 @@
                           "referencedDeclaration": 2694,
                           "src": "2321:6:13",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                            "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                             "typeString": "struct UserOperation calldata"
                           }
                         },
@@ -3270,7 +3270,7 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                            "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                             "typeString": "struct UserOperation calldata"
                           },
                           {
@@ -3289,7 +3289,7 @@
                         "referencedDeclaration": 2762,
                         "src": "2302:18:13",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UserOperation_$3661_calldata_ptr_$_t_bytes32_$_t_address_$returns$_t_uint256_$",
+                          "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UserOperation_$3671_calldata_ptr_$_t_bytes32_$_t_address_$returns$_t_uint256_$",
                           "typeString": "function (struct UserOperation calldata,bytes32,address) returns (uint256)"
                         }
                       },
@@ -3340,7 +3340,7 @@
                           "referencedDeclaration": 2694,
                           "src": "2367:6:13",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                            "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                             "typeString": "struct UserOperation calldata"
                           }
                         },
@@ -3352,7 +3352,7 @@
                         "memberLocation": "2374:8:13",
                         "memberName": "initCode",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 3644,
+                        "referencedDeclaration": 3654,
                         "src": "2367:15:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_calldata_ptr",
@@ -3416,7 +3416,7 @@
                               "referencedDeclaration": 2694,
                               "src": "2435:6:13",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                                "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                                 "typeString": "struct UserOperation calldata"
                               }
                             }
@@ -3424,7 +3424,7 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                                "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                                 "typeString": "struct UserOperation calldata"
                               }
                             ],
@@ -3435,7 +3435,7 @@
                             "referencedDeclaration": 2769,
                             "src": "2411:23:13",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UserOperation_$3661_calldata_ptr_$returns$__$",
+                              "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UserOperation_$3671_calldata_ptr_$returns$__$",
                               "typeString": "function (struct UserOperation calldata)"
                             }
                           },
@@ -3548,7 +3548,7 @@
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                    "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                     "typeString": "struct UserOperation"
                   },
                   "typeName": {
@@ -3561,13 +3561,13 @@
                         "2068:13:13"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 3661,
+                      "referencedDeclaration": 3671,
                       "src": "2068:13:13"
                     },
-                    "referencedDeclaration": 3661,
+                    "referencedDeclaration": 3671,
                     "src": "2068:13:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_UserOperation_$3661_storage_ptr",
+                      "typeIdentifier": "t_struct$_UserOperation_$3671_storage_ptr",
                       "typeString": "struct UserOperation"
                     }
                   },
@@ -3759,7 +3759,7 @@
                                 "referencedDeclaration": 2690,
                                 "src": "2693:10:13",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_IEntryPoint_$3499_$",
+                                  "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_IEntryPoint_$3509_$",
                                   "typeString": "function () view returns (contract IEntryPoint)"
                                 }
                               },
@@ -3775,7 +3775,7 @@
                               "src": "2693:12:13",
                               "tryCall": false,
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_IEntryPoint_$3499",
+                                "typeIdentifier": "t_contract$_IEntryPoint_$3509",
                                 "typeString": "contract IEntryPoint"
                               }
                             }
@@ -3783,7 +3783,7 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_IEntryPoint_$3499",
+                                "typeIdentifier": "t_contract$_IEntryPoint_$3509",
                                 "typeString": "contract IEntryPoint"
                               }
                             ],
@@ -3953,7 +3953,7 @@
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                    "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                     "typeString": "struct UserOperation"
                   },
                   "typeName": {
@@ -3966,13 +3966,13 @@
                         "3769:13:13"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 3661,
+                      "referencedDeclaration": 3671,
                       "src": "3769:13:13"
                     },
-                    "referencedDeclaration": 3661,
+                    "referencedDeclaration": 3671,
                     "src": "3769:13:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_UserOperation_$3661_storage_ptr",
+                      "typeIdentifier": "t_struct$_UserOperation_$3671_storage_ptr",
                       "typeString": "struct UserOperation"
                     }
                   },
@@ -4106,7 +4106,7 @@
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_UserOperation_$3661_calldata_ptr",
+                    "typeIdentifier": "t_struct$_UserOperation_$3671_calldata_ptr",
                     "typeString": "struct UserOperation"
                   },
                   "typeName": {
@@ -4119,13 +4119,13 @@
                         "4273:13:13"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 3661,
+                      "referencedDeclaration": 3671,
                       "src": "4273:13:13"
                     },
-                    "referencedDeclaration": 3661,
+                    "referencedDeclaration": 3671,
                     "src": "4273:13:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_UserOperation_$3661_storage_ptr",
+                      "typeIdentifier": "t_struct$_UserOperation_$3671_storage_ptr",
                       "typeString": "struct UserOperation"
                     }
                   },
@@ -4595,7 +4595,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.4",
-  "updatedAt": "2023-02-18T14:16:06.669Z",
+  "updatedAt": "2023-02-18T15:20:25.502Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
