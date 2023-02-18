@@ -6,13 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "predict": "node services/address/predict.js",
-    "create": "node services/address/create.js"
+    "create": "node services/address/create.js",
+    "withdraw-eth": "node services/withdraw/eth.js",
+    "withdraw-erc20": "node services/withdraw/erc20.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bytes32": "^0.0.3",
     "dotenv": "^16.0.3",
-    "ethers": "^5.7.2"
+    "ethers": "^5.7.2",
+    "web3": "^1.8.2"
   }
 }
