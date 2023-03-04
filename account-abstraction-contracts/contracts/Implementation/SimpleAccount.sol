@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import "@openzeppelin/contracts/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 
-import "../Core/BaseAccount.sol";
+import "../core/BaseAccount.sol";
 
 /**
  * minimal account.
@@ -19,9 +19,6 @@ import "../Core/BaseAccount.sol";
  */
 contract SimpleAccount is BaseAccount, UUPSUpgradeable, Initializable {
     using ECDSA for bytes32;
-
-    /// @notice defining whether contract is Base or not
-    bool public isBase;
 
     //explicit sizes of nonce, to fit a single storage cell with "owner"
     uint96 private _nonce;
@@ -35,7 +32,7 @@ contract SimpleAccount is BaseAccount, UUPSUpgradeable, Initializable {
         return _entryPoint;
     }
 
-    IEntryPoint private _entryPoint;
+    IEntryPoint private immutable _entryPoint;
 
     event SimpleAccountInitialized(
         IEntryPoint indexed entryPoint,
@@ -45,8 +42,8 @@ contract SimpleAccount is BaseAccount, UUPSUpgradeable, Initializable {
     // solhint-disable-next-line no-empty-blocks
     receive() external payable {}
 
-    constructor() {
-        isBase = true;
+    constructor(IEntryPoint anEntryPoint) {
+        _entryPoint = anEntryPoint;
     }
 
     modifier onlyOwner() {
@@ -92,17 +89,8 @@ contract SimpleAccount is BaseAccount, UUPSUpgradeable, Initializable {
      * an account must have a method for replacing the entryPoint, in case the the entryPoint is
      * upgraded to a newer version.
      */
-    function initialize(IEntryPoint anEntryPoint, address owner_)
-        external
-        initializer
-    {
-        require(
-            isBase == false,
-            "SimpleAccount: this is the base contract, cannot be initialized"
-        );
-        _entryPoint = anEntryPoint;
-
-        _initialize(owner_);
+    function initialize(address anOwner) public virtual initializer {
+        _initialize(anOwner);
     }
 
     function _initialize(address anOwner) internal virtual {

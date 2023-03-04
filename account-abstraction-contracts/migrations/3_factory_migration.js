@@ -1,5 +1,4 @@
 const factoryCont = artifacts.require("SimpleAccountFactory");
-const simpleAccountCont = artifacts.require("SimpleAccount");
 
 const { setEnvValue } = require("../utils/env-man");
 
@@ -19,9 +18,7 @@ module.exports = async function (deployer, network, accounts) {
       c = { ...conf.devnet };
   }
 
-  const simple_account_address = (await simpleAccountCont.deployed()).address;
-
-  await deployer.deploy(factoryCont, simple_account_address);
+  await deployer.deploy(factoryCont, c.entrypointAddress);
 
   const factory = await factoryCont.deployed();
 
