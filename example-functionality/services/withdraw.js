@@ -51,16 +51,6 @@ const withdrawEth = async (index, to, amount) => {
   return uoHash;
 };
 
-// const main = async () => {
-//   const index = 0;
-//   const to = "0x02a33d9Ab48A39D97bcBD5468bc42Fb6E794bd0D";
-//   const amount = 0.02;
-
-//   const uoHash = await withdrawEth(index, to, amount);
-
-//   console.log({ uoHash });
-// };
-
 module.exports = {
   withdrawEth,
 };
