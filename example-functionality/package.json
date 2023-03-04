@@ -5,17 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predict": "node services/address/predict.js",
-    "create": "node services/address/create.js",
-    "withdraw-eth": "node services/withdraw/eth.js",
-    "withdraw-erc20": "node services/withdraw/erc20.js"
+    "start": "nodemon index"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@account-abstraction/sdk": "^0.4.0",
+    "body-parser": "^1.20.2",
     "bytes32": "^0.0.3",
     "dotenv": "^16.0.3",
     "ethers": "^5.7.2",
+    "express": "^4.18.2",
+    "json-rpc-2.0": "^1.5.1",
+    "nodemon": "^2.0.21",
     "web3": "^1.8.2"
   }
 }
