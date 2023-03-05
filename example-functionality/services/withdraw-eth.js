@@ -14,7 +14,7 @@ const provider = new ethers.providers.JsonRpcProvider(process.env.ETH_RPC_URL);
 
 const factoryAddress = process.env.FACTORY_ADDRESS;
 
-const withdrawEth = async (index, to, amount) => {
+const withdrawETH = async (index, to, amount) => {
   const privateKey = process.env.PRIV_KEY;
 
   const wallet = new ethers.Wallet(privateKey, provider);
@@ -48,9 +48,11 @@ const withdrawEth = async (index, to, amount) => {
 
   const uoHash = await client.sendUserOpToBundler(op);
 
-  return uoHash;
+  const txHash = await walletAPI.getUserOpReceipt(uoHash);
+
+  return txHash;
 };
 
 module.exports = {
-  withdrawEth,
+  withdrawETH,
 };

@@ -4,19 +4,29 @@ const bodyParser = require("body-parser");
 
 const { createAddress } = require("./services/create-address");
 
-const { withdrawEth } = require("./services/withdraw");
+const { withdrawETH } = require("./services/withdraw-eth");
+
+const { withdrawERC20 } = require("./services/withdraw-erc20");
 
 const server = new JSONRPCServer();
 
-server.addMethod("createAddress", async ({ index }) => {
+server.addMethod("getAddress", async ({ index }) => {
   const address = await createAddress(index);
   return address;
 });
 
-server.addMethod("withdrawEth", async ({ index, to, amount }) => {
-  const uoHash = await withdrawEth(index, to, amount);
-  return "Withdrawal successful";
+server.addMethod("withdrawETH", async ({ index, to, amount }) => {
+  const txHash = await withdrawETH(index, to, amount);
+  return txHash;
 });
+
+server.addMethod(
+  "withdrawERC20",
+  async ({ index, to, amount, tokenAddress }) => {
+    const txHash = await withdrawERC20(index, to, amount, tokenAddress);
+    return txHash;
+  }
+);
 
 express()
   .use(bodyParser.json())
