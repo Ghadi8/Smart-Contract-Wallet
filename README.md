@@ -1,27 +1,22 @@
 # Smart-Contract-Wallet
-Simple Implementation of Account Abstraction based on eth-infinitism contracts
+The Smart Contract Wallet is a simple implementation of Account Abstraction based on eth-infinitism contracts. It allows users to create smart contract wallets and perform transactions using Ether and ERC20 tokens.
 
-## Setup
+## Installation
 
-```
-cd example-functionality
-```
-Run the app
+To install the Smart Contract Wallet, follow these steps:
 
-```
-npm run start
-```
-The server will be running locally on port 3000:
+Clone the repository to your local machine.
+Navigate to the "example-functionality" directory.
+Run the command "npm install" to install the required dependencies.
+Run the command "npm run start" to start the server locally on port 3000.
 
-```
-http://localhost:3000/sw/
-```
+## Usage
 
-## Methods
+The Smart Contract Wallet provides the following methods:
 
 ### getAddress(index)
 
-Creates a smart contract wallet
+Creates a smart contract wallet with the specified index.
 
 - Params: index
 
@@ -38,6 +33,8 @@ Request:
 ```
 
 ### withdrawETH(index, to, amount)
+
+Withdraws Eth from the specified smart contract wallet and sends it to the specified address.
 
 - Params: index, to, amount
 
@@ -57,6 +54,8 @@ Request
 
 ### withdrawERC20(index, to, amount, tokenAddress)
 
+Withdraws ERC20 tokens from the specified smart contract wallet and sends them to the specified address.
+
 - Params: index, to, amount, tokenAddress
 
 Request
@@ -75,4 +74,4 @@ Request
 ```
 
 
-## TODO: Add Paymaster && Aggregator functionality
+## TODO: Add Paymaster functionality
