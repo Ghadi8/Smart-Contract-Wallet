@@ -73,5 +73,8 @@ Request
 }
 ```
 
+### Batch Transactions Implemented but not functional yet due to issue with eth-infinitism/bundler 
+
+https://github.com/stackup-wallet/erc-4337-examples/issues/18
 
 ## TODO: Add Paymaster functionality
