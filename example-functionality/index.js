@@ -6,6 +6,10 @@ const { createAddress } = require("./services/create-address");
 
 const { withdrawETH } = require("./services/withdraw-eth");
 
+const { batchEth } = require("./services/batch-eth");
+
+const { batchERC20 } = require("./services/batch-erc20");
+
 const { withdrawERC20 } = require("./services/withdraw-erc20");
 
 const server = new JSONRPCServer();
@@ -27,6 +31,16 @@ server.addMethod(
     return txHash;
   }
 );
+
+server.addMethod("batchETH", async ({ index, to, amounts }) => {
+  const txHash = await batchEth(index, to, amounts);
+  return txHash;
+});
+
+server.addMethod("batchERC20", async ({ index, to, amounts, tokenAddress }) => {
+  const txHash = await batchERC20(index, to, amounts, tokenAddress);
+  return txHash;
+});
 
 express()
   .use(bodyParser.json())
