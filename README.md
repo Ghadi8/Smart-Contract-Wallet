@@ -63,7 +63,7 @@ Request
 ```
  {"jsonrpc" :"2.0",
  "id": 1,
- "method": "withdrawETH",
+ "method": "withdrawERC20",
  "params": {
    "index": 0,
    "to": "0x02a33d9Ab48A39D97bcBD5468bc42Fb6E794bd0D",
