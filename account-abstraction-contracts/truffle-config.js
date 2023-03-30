@@ -22,9 +22,9 @@ module.exports = {
           providerOrUrl: `wss://goerli.infura.io/ws/v3/${infuraKey}`,
         }),
       network_id: 5,
-      gas: 7500000,
+      gas: 3500000,
       confirmations: 1,
-      gasPrice: 30000000000, // 100
+      gasPrice: 70000000000, // 100
       timeoutBlocks: 200,
       skipDryRun: true,
     },

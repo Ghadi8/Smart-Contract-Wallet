@@ -3,9 +3,9 @@ const provider = new Web3.providers.HttpProvider("http://localhost:8545");
 var web3 = new Web3(provider);
 
 module.exports = {
-  devnet: { entrypointAddress: "0x0F46c65C17AA6b4102046935F33301f0510B163A" },
+  devnet: { entrypointAddress: "0x0576a174D229E3cFA37253523E645A78A0C91B57" },
   goerli: {
-    entrypointAddress: "0x0F46c65C17AA6b4102046935F33301f0510B163A",
+    entrypointAddress: "0x0576a174D229E3cFA37253523E645A78A0C91B57",
   },
   mainnet: {},
 };

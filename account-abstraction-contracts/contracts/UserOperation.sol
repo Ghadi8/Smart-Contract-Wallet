@@ -5,15 +5,16 @@ pragma solidity ^0.8.0;
 
 /**
  * User Operation struct
- * @param sender the sender account of this request
+ * @param sender the sender account of this request.
  * @param nonce unique value the sender uses to verify it is not a replay.
- * @param initCode if set, the account contract will be created by this constructor
+ * @param initCode if set, the account contract will be created by this constructor/
  * @param callData the method call to execute on this account.
- * @param verificationGasLimit gas used for validateUserOp and validatePaymasterUserOp
+ * @param callGasLimit the gas limit passed to the callData method call.
+ * @param verificationGasLimit gas used for validateUserOp and validatePaymasterUserOp.
  * @param preVerificationGas gas not calculated by the handleOps method, but added to the gas paid. Covers batch overhead.
- * @param maxFeePerGas same as EIP-1559 gas parameter
- * @param maxPriorityFeePerGas same as EIP-1559 gas parameter
- * @param paymasterAndData if set, this field hold the paymaster address and "paymaster-specific-data". the paymaster will pay for the transaction instead of the sender
+ * @param maxFeePerGas same as EIP-1559 gas parameter.
+ * @param maxPriorityFeePerGas same as EIP-1559 gas parameter.
+ * @param paymasterAndData if set, this field holds the paymaster address and paymaster-specific data. the paymaster will pay for the transaction instead of the sender.
  * @param signature sender-verified signature over the entire request, the EntryPoint address and the chain ID.
  */
 struct UserOperation {
@@ -30,12 +31,13 @@ struct UserOperation {
     bytes signature;
 }
 
+/**
+ * Utility functions helpful when working with UserOperation structs.
+ */
 library UserOperationLib {
-    function getSender(UserOperation calldata userOp)
-        internal
-        pure
-        returns (address)
-    {
+    function getSender(
+        UserOperation calldata userOp
+    ) internal pure returns (address) {
         address data;
         //read sender from userOp, which is first userOp member (saves 800 gas...)
         assembly {
@@ -46,11 +48,9 @@ library UserOperationLib {
 
     //relayer/block builder might submit the TX with higher priorityFee, but the user should not
     // pay above what he signed for.
-    function gasPrice(UserOperation calldata userOp)
-        internal
-        view
-        returns (uint256)
-    {
+    function gasPrice(
+        UserOperation calldata userOp
+    ) internal view returns (uint256) {
         unchecked {
             uint256 maxFeePerGas = userOp.maxFeePerGas;
             uint256 maxPriorityFeePerGas = userOp.maxPriorityFeePerGas;
@@ -62,11 +62,9 @@ library UserOperationLib {
         }
     }
 
-    function pack(UserOperation calldata userOp)
-        internal
-        pure
-        returns (bytes memory ret)
-    {
+    function pack(
+        UserOperation calldata userOp
+    ) internal pure returns (bytes memory ret) {
         //lighter signature scheme. must match UserOp.ts#packUserOp
         bytes calldata sig = userOp.signature;
         // copy directly the userOp from calldata up to (but not including) the signature.
@@ -82,11 +80,9 @@ library UserOperationLib {
         }
     }
 
-    function hash(UserOperation calldata userOp)
-        internal
-        pure
-        returns (bytes32)
-    {
+    function hash(
+        UserOperation calldata userOp
+    ) internal pure returns (bytes32) {
         return keccak256(pack(userOp));
     }
 
