@@ -73,6 +73,27 @@ Request
 }
 ```
 
+### withdrawER721(index, to, tokenId, tokenAddress)
+
+Transfers ERC721 token from the specified smart contract wallet and sends them to the specified address.
+
+- Params: index, to, tokenId, tokenAddress
+
+Request
+
+```
+ {"jsonrpc" :"2.0",
+ "id": 1,
+ "method": "withdrawERC721",
+ "params": {
+   "index": 0,
+   "to": "0x02a33d9Ab48A39D97bcBD5468bc42Fb6E794bd0D",
+   "tokenId": 2,
+   "tokenAddress": "0x30CB732aca23104529DB8ce865E7B31C1344B818"
+        }
+}
+```
+
 ### Batch Transactions Implemented but not functional yet due to issue with eth-infinitism/bundler 
 
 https://github.com/stackup-wallet/erc-4337-examples/issues/18
