@@ -33,7 +33,7 @@ const withdrawERC1155 = async (index, to, tokenId, amount, tokenAddress) => {
     chainId
   );
 
-  const from = walletAPI.getCounterFactualAddress();
+  const from = await walletAPI.getCounterFactualAddress();
 
   const ABI = [
     "function safeTransferFrom(address from, address to, uint256 id, uint256 amount, bytes memory data)",

@@ -14,6 +14,8 @@ const { withdrawERC20 } = require("./services/withdraw-erc20");
 
 const { withdrawERC721 } = require("./services/withdraw-erc721");
 
+const { withdrawERC1155 } = require("./services/withdraw-erc1155");
+
 const server = new JSONRPCServer();
 
 server.addMethod("getAddress", async ({ index }) => {
@@ -38,6 +40,20 @@ server.addMethod(
   "withdrawERC721",
   async ({ index, to, tokenId, tokenAddress }) => {
     const txHash = await withdrawERC721(index, to, tokenId, tokenAddress);
+    return txHash;
+  }
+);
+
+server.addMethod(
+  "withdrawERC1155",
+  async ({ index, to, tokenId, amount, tokenAddress }) => {
+    const txHash = await withdrawERC1155(
+      index,
+      to,
+      tokenId,
+      amount,
+      tokenAddress
+    );
     return txHash;
   }
 );
