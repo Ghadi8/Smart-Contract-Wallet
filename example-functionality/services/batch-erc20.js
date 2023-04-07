@@ -12,7 +12,11 @@ const provider = new ethers.providers.JsonRpcProvider(process.env.ETH_RPC_URL);
 
 const factoryAddress = process.env.FACTORY_ADDRESS;
 
-const batchERC20 = async (index, to, amounts, tokenAddress) => {
+const batchERC20 = async (index, to, amounts, tokens) => {
+  if (tokens.length != to.length || tokens.length != amounts.length) {
+    throw new Error("All arrays must be of equal length");
+  }
+
   const privateKey = process.env.PRIV_KEY;
 
   const wallet = new ethers.Wallet(privateKey, provider);
@@ -43,10 +47,20 @@ const batchERC20 = async (index, to, amounts, tokenAddress) => {
   const ABI = ["function transfer(address to, uint256 amount)"];
   let iface = new ethers.utils.Interface(ABI);
 
-  const token = ethers.utils.getAddress(tokenAddress);
+  const decimalsABI = ["function decimals() view returns (uint8)"];
+  let decimalsIface = new ethers.utils.Interface(decimalsABI);
+
+  for (let i = 0; i < tokens.length; i++) {
+    const token = new ethers.Contract(tokens[i], decimalsIface, provider);
+    const decimals = await token.decimals();
+    amounts[i] = ethers.utils.parseUnits(amounts[i].toString(), decimals);
+  }
+
+  let token;
 
   to.map((addr) => addr.trim()).forEach((addr, id) => {
-    dest.push(ethers.utils.getAddress(token));
+    token = ethers.utils.getAddress(tokens[id]);
+    dest.push(token);
     func.push(
       iface.encodeFunctionData("transfer", [
         ethers.utils.getAddress(addr),
@@ -65,7 +79,6 @@ const batchERC20 = async (index, to, amounts, tokenAddress) => {
     value: 0,
     data,
     ...(await getGasFee(provider)),
-    gasLimit: 100000,
   });
 
   const uoHash = await client.sendUserOpToBundler(op);

@@ -36,7 +36,15 @@ const withdrawERC20 = async (index, to, amount, tokenAddress) => {
   const ABI = ["function transfer(address to, uint256 amount)"];
   let iface = new ethers.utils.Interface(ABI);
 
-  const data = iface.encodeFunctionData("transfer", [to, amount]);
+  const decimalsABI = ["function decimals() view returns (uint8)"];
+  let decimalsIface = new ethers.utils.Interface(decimalsABI);
+
+  const token = new ethers.Contract(tokenAddress, decimalsIface, provider);
+
+  const decimals = await token.decimals();
+
+  const value = ethers.utils.parseUnits(amount.toString(), decimals);
+  const data = iface.encodeFunctionData("transfer", [to, value]);
 
   const target = ethers.utils.getAddress(tokenAddress);
 

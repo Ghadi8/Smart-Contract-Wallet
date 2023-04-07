@@ -63,8 +63,8 @@ server.addMethod("batchETH", async ({ index, to, amounts }) => {
   return txHash;
 });
 
-server.addMethod("batchERC20", async ({ index, to, amounts, tokenAddress }) => {
-  const txHash = await batchERC20(index, to, amounts, tokenAddress);
+server.addMethod("batchERC20", async ({ index, to, amounts, tokens }) => {
+  const txHash = await batchERC20(index, to, amounts, tokens);
   return txHash;
 });
 
