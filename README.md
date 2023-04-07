@@ -67,7 +67,7 @@ Request
  "params": {
    "index": 0,
    "to": "0x02a33d9Ab48A39D97bcBD5468bc42Fb6E794bd0D",
-   "amount": 2000000000,
+   "amount": 20,
    "tokenAddress": "0xc6fDe3FD2Cc2b173aEC24cc3f267cb3Cd78a26B7"
         }
 }
@@ -89,6 +89,28 @@ Request
    "index": 0,
    "to": "0x02a33d9Ab48A39D97bcBD5468bc42Fb6E794bd0D",
    "tokenId": 2,
+   "tokenAddress": "0x30CB732aca23104529DB8ce865E7B31C1344B818"
+        }
+}
+```
+
+### withdrawERC1155(index, to, tokenId, amount, tokenAddress)
+
+Transfers ERCC1155 tokens from the specified smart contract wallet and sends them to the specified address.
+
+- Params: index, to, tokenId, amount, tokenAddress
+
+Request
+
+```
+ {"jsonrpc" :"2.0",
+ "id": 1,
+ "method": "withdrawERC1155",
+ "params": {
+   "index": 0,
+   "to": "0x02a33d9Ab48A39D97bcBD5468bc42Fb6E794bd0D",
+   "tokenId": 2,
+   "amount": 2,
    "tokenAddress": "0x30CB732aca23104529DB8ce865E7B31C1344B818"
         }
 }
